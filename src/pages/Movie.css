@@ -50,9 +50,48 @@
 }
 
 .description {
-    padding-bottom: 10rem;
+    padding-bottom: 2.5rem;
 }
 
 .description p {
     line-height: 1.4rem;
 }
+
+.button {
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+  
+  .button button {
+    background-color:  gold;
+    border: 2px solid  gold;
+    border-radius: 4px;
+    color: black;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    transition: .4s;
+    text-align: center;
+    font-weight: bold;
+    width:60%;
+    font-size: 100%;
+    cursor: pointer;
+  }
+  
+  .button button:hover {
+    background-color: transparent;
+    color:  gold; 
+  }
+
+  .button p {
+    background-color:  gold;
+    border: 2px solid  gold;
+    border-radius: 4px;
+    color: black;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    transition: .4s;
+    text-align: center;
+    font-weight: bold;
+    width:60%;
+    font-size: 100%;
+  }
