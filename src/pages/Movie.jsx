@@ -23,7 +23,7 @@ const Movie = () => {
     const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(() => {
-        const movieUrl = `${moviesURL}movie/${id}?${apiKey}`
+        const movieUrl = `${moviesURL}movie/${id}?${apiKey}`;
         const favoritedUrl = `${favoriteURL}/movies?${apiKey}`;
 
         const getMovie = async (url) => {
@@ -46,7 +46,7 @@ const Movie = () => {
 
         getMovie(movieUrl);
         getFavoriteMovies(favoritedUrl);
-    }, [id]);
+    }, [id]); 
 
     const formatCurrency = (number) => {
         return number.toLocaleString("pt-BR", {
@@ -87,7 +87,7 @@ const Movie = () => {
         <div className="movie-page">
             {movie && (
                 <>
-                    <MovieCard movie={movie} showLink={false} />
+                    <MovieCard movie={movie} showLink={false}/>
                     <p className="tagline">{movie.tagline}</p>
                     <div className="info">
                         <h3>

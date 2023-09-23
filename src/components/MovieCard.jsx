@@ -1,20 +1,26 @@
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 
-import { FaStar } from 'react-icons/fa'
+import RottenTomatoesInfo from "../components/RottenTomatoesInfo"
 
-const imageUrl = import.meta.env.VITE_IMG
+const imageUrl = import.meta.env.VITE_IMG;
 
-const MovieCard = ({movie, showLink = true}) => {
-    return (
-        <div className="movie-card">
-            <img src={imageUrl + movie.poster_path} alt={movie.title} />
-            <h2>{movie.title}</h2>
-            <p>
-                <FaStar /> {movie.vote_average}
-            </p>
-            {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
-        </div>
-    )
-}
+const MovieCard = ({ movie, showLink = true }) => {
+  return (
+    <div className="movie-card">
+      <img src={imageUrl + movie.poster_path} alt={movie.title} />
+      <h2>{movie.title}</h2>
 
-export default MovieCard
+      <RottenTomatoesInfo movie={movie} />
+
+      <p>
+        <FaStar /> {movie.vote_average} Imdb
+      </p>
+
+      {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
+    </div>
+  );
+};
+
+export default MovieCard;

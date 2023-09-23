@@ -30,7 +30,7 @@ const Favorite = () => {
     <div className="container">
       <h2 className="title">Filmes favoritos:</h2>
       <div className="movies-container">
-        {favoriteMovies.length === 0 && <p>Carregando...</p>}
+        {favoriteMovies.length === 0 && <p>Sem filmes favoritados</p>}
         {favoriteMovies.length > 0 &&
           favoriteMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
